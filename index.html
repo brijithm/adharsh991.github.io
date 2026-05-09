@@ -6,16 +6,16 @@
     <title>V Adharsh | Video Editor</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <a href="#home" class="logo"><i class="fa-regular fa-pen-to-square"></i>cut_pulse</a>
+        <a href="#home" class="logo"><i class="fa-regular fa-pen-to-square"></i> cut_pulse</a>
         <div class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
         <nav class="navbar" id="navbar">
             <button class="close-btn" id="closeBtn">&times;</button>
@@ -33,13 +33,13 @@
         <div class="home-text">
             <h1>Hi, I'm Adharsh</h1>
             <h3>Video Editor</h3>
-            <p>I create engaging and professional videos for <br> businesses  and individuals.</p>
+            <p>I create engaging and professional videos for<br>businesses and individuals.</p>
         </div>
         <span class="home-imgHover"></span>
     </section>
 
     <!-- ABOUT -->
-    <section class="about fade-in" id="about" >
+    <section class="about fade-in" id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -62,369 +62,97 @@
             <h2>Things I'm Good In</h2>
         </div>
         <ul>
-            <div class="skill-card">
-                <li><span>Video Editing</span><br>Editing raw footage into engaging and polished videos using professional pacing, cuts, and transitions to create a compelling final story.</li>
-            </div>
-            <div class="skill-card">
-                <li><span>Motion Graphics</span><br>Designing animated titles, lower thirds, and dynamic visual elements to enhance storytelling and keep viewers engaged.</li>
-            </div>
-            <div class="skill-card">
-                <li><span>Color Grading</span><br>Adjusting color, contrast, and tone to achieve a cinematic look and maintain visual consistency across the entire video.</li>
-            </div>
-            <div class="skill-card">
-                <li><span>SFX Design</span><br>Adding sound effects and audio layers to improve realism, emphasize actions, and create a more immersive viewing experience.</li>
-            </div>
-            <div class="skill-card">
-                <li><span>Storytelling Ability</span><br>Structuring footage and visuals to communicate a clear narrative that captures attention and keeps the audience emotionally connected.</li>
-            </div>
+            <div class="skill-card"><li><span>Video Editing</span><br>Editing raw footage into engaging and polished videos using professional pacing, cuts, and transitions to create a compelling final story.</li></div>
+            <div class="skill-card"><li><span>Motion Graphics</span><br>Designing animated titles, lower thirds, and dynamic visual elements to enhance storytelling and keep viewers engaged.</li></div>
+            <div class="skill-card"><li><span>Color Grading</span><br>Adjusting color, contrast, and tone to achieve a cinematic look and maintain visual consistency across the entire video.</li></div>
+            <div class="skill-card"><li><span>SFX Design</span><br>Adding sound effects and audio layers to improve realism, emphasize actions, and create a more immersive viewing experience.</li></div>
+            <div class="skill-card"><li><span>Storytelling Ability</span><br>Structuring footage and visuals to communicate a clear narrative that captures attention and keeps the audience emotionally connected.</li></div>
         </ul>
 
         <!-- TOOLS -->
         <section class="tools-section">
-            <div class="tools-left">
-                <h2>Tools I Use</h2>
-            </div>
+            <div class="tools-left"><h2>Tools I Use</h2></div>
             <div class="logo-slider">
-                <div class="logo-track">
+                <div class="logo-track" id="logoTrack">
+                    <!-- 3 sets for seamless loop -->
+                    <div class="logo-card"><img src="images/aftereffects.png.png" alt="After Effects"><div class="skill-info"><p class="title">After Effects</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>After Effects</h3><p>Motion graphics & compositing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/premierpro.png.png" alt="Premiere Pro"><div class="skill-info"><p class="title">Premiere Pro</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Premiere Pro</h3><p>Industry-standard video editing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/pngwing.com.png" alt="DaVinci Resolve"><div class="skill-info"><p class="title">DaVinci Resolve</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>DaVinci Resolve</h3><p>Editing & color grading.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/photoshop.png.png" alt="Photoshop"><div class="skill-info"><p class="title">Photoshop</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Photoshop</h3><p>Graphics & image editing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/blender.png.png" alt="Blender"><div class="skill-info"><p class="title">Blender</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Blender</h3><p>3D modeling & VFX.</p></div></div></div></div>
 
-                    <!-- Original set -->
-                    <div class="logo-card">
-                        <img src="images/aftereffects.png.png" alt="After Effects">
-                        <div class="skill-info">
-                            <p class="title">After Effects</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>After Effects</h3>
-                                    <p>Professional video editing and motion graphics software.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/premierpro.png.png" alt="Premiere Pro">
-                        <div class="skill-info">
-                            <p class="title">Premiere Pro</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Premiere Pro</h3>
-                                    <p>Industry-standard video editing software for professional projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/pngwing.com.png" alt="DaVinci Resolve">
-                        <div class="skill-info">
-                            <p class="title">DaVinci Resolve</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>DaVinci Resolve</h3>
-                                    <p>Powerful video editing and color grading software for cinematic projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/photoshop.png.png" alt="Photoshop">
-                        <div class="skill-info">
-                            <p class="title">Photoshop</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Photoshop</h3>
-                                    <p>Versatile image editing software for creating custom graphics and textures.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/blender.png.png" alt="Blender">
-                        <div class="skill-info">
-                            <p class="title">Blender</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Blender</h3>
-                                    <p>Open-source 3D modeling and animation software for creating visual effects and motion graphics.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="logo-card"><img src="images/aftereffects.png.png" alt="After Effects"><div class="skill-info"><p class="title">After Effects</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>After Effects</h3><p>Motion graphics & compositing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/premierpro.png.png" alt="Premiere Pro"><div class="skill-info"><p class="title">Premiere Pro</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Premiere Pro</h3><p>Industry-standard video editing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/pngwing.com.png" alt="DaVinci Resolve"><div class="skill-info"><p class="title">DaVinci Resolve</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>DaVinci Resolve</h3><p>Editing & color grading.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/photoshop.png.png" alt="Photoshop"><div class="skill-info"><p class="title">Photoshop</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Photoshop</h3><p>Graphics & image editing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/blender.png.png" alt="Blender"><div class="skill-info"><p class="title">Blender</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Blender</h3><p>3D modeling & VFX.</p></div></div></div></div>
 
-                    <!-- Duplicate set for seamless loop -->
-                     <div class="logo-card">
-                        <img src="images/aftereffects.png.png" alt="After Effects">
-                        <div class="skill-info">
-                            <p class="title">After Effects</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>After Effects</h3>
-                                    <p>Professional video editing and motion graphics software.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/premierpro.png.png" alt="Premiere Pro">
-                        <div class="skill-info">
-                            <p class="title">Premiere Pro</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Premiere Pro</h3>
-                                    <p>Industry-standard video editing software for professional projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/pngwing.com.png" alt="DaVinci Resolve">
-                        <div class="skill-info">
-                            <p class="title">DaVinci Resolve</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>DaVinci Resolve</h3>
-                                    <p>Powerful video editing and color grading software for cinematic projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/photoshop.png.png" alt="Photoshop">
-                        <div class="skill-info">
-                            <p class="title">Photoshop</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Photoshop</h3>
-                                    <p>Versatile image editing software for creating custom graphics and textures.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/blender.png.png" alt="Blender">
-                        <div class="skill-info">
-                            <p class="title">Blender</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Blender</h3>
-                                    <p>Open-source 3D modeling and animation software for creating visual effects and motion graphics.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Duplicate set for seamless loop -->
-                    <div class="logo-card">
-                        <img src="images/aftereffects.png.png" alt="After Effects">
-                        <div class="skill-info">
-                            <p class="title">After Effects</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>After Effects</h3>
-                                    <p>Professional video editing and motion graphics software.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/premierpro.png.png" alt="Premiere Pro">
-                        <div class="skill-info">
-                            <p class="title">Premiere Pro</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Premiere Pro</h3>
-                                    <p>Industry-standard video editing software for professional projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/pngwing.com.png" alt="DaVinci Resolve">
-                        <div class="skill-info">
-                            <p class="title">DaVinci Resolve</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>DaVinci Resolve</h3>
-                                    <p>Powerful video editing and color grading software for cinematic projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/photoshop.png.png" alt="Photoshop">
-                        <div class="skill-info">
-                            <p class="title">Photoshop</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Photoshop</h3>
-                                    <p>Versatile image editing software for creating custom graphics and textures.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="logo-card">
-                        <img src="images/blender.png.png" alt="Blender">
-                        <div class="skill-info">
-                            <p class="title">Blender</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:85%;"></div>
-                                <div class="hover-info">
-                                    <h3>Blender</h3>
-                                    <p>Open-source 3D modeling and animation software for creating visual effects and motion graphics.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <div class="logo-card"><img src="images/aftereffects.png.png" alt="After Effects"><div class="skill-info"><p class="title">After Effects</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>After Effects</h3><p>Motion graphics & compositing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/premierpro.png.png" alt="Premiere Pro"><div class="skill-info"><p class="title">Premiere Pro</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Premiere Pro</h3><p>Industry-standard video editing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/pngwing.com.png" alt="DaVinci Resolve"><div class="skill-info"><p class="title">DaVinci Resolve</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>DaVinci Resolve</h3><p>Editing & color grading.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/photoshop.png.png" alt="Photoshop"><div class="skill-info"><p class="title">Photoshop</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Photoshop</h3><p>Graphics & image editing.</p></div></div></div></div>
+                    <div class="logo-card"><img src="images/blender.png.png" alt="Blender"><div class="skill-info"><p class="title">Blender</p><div class="progress"><div class="progress-bar" style="width:85%"></div><div class="hover-info"><h3>Blender</h3><p>3D modeling & VFX.</p></div></div></div></div>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- PORTFOLIO videos-->
-
+    <!-- PORTFOLIO -->
     <section class="portfolio fade-in" id="portfolio">
-    <div class="portfolio-head">
-        <h2>My Work</h2>
-        <p>Hover to preview • Click to watch</p>
-    </div>
-    <div class="portfolio-slider">
-        <div class="portfolio-track">
-            <div class="portfolio-card">
-                <video src="videos/clip1.mp4.mp4" poster="images/clip1.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Cinematic Edit</span>
-                    <a href="https://youtube.com/your-link-1" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip2.mp4.mp4" poster="images/clip2.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Social Media Reel</span>
-                    <a href="https://youtube.com/your-link-2" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip3.mp4.mp4" poster="images/clip3.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Brand Promo</span>
-                    <a href="https://youtube.com/your-link-3" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip4.mp4.mp4" poster="images/clip4.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Brand Promo</span>
-                    <a href="https://youtube.com/your-link-3" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip5.mp4.mp4" poster="images/clip5.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Brand Promo</span>
-                    <a href="https://youtube.com/your-link-3" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <!-- Duplicates for seamless loop -->
-            <div class="portfolio-card">
-                <video src="videos/clip1.mp4.mp4" poster="images/clip1.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Cinematic Edit</span>
-                    <a href="videos/clip1.mp4.mp4" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip2.mp4.mp4" poster="images/clip2.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Social Media Reel</span>
-                    <a href="https://youtube.com/your-link-2" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip3.mp4.mp4" poster="images/clip3.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Social Media Reel</span>
-                    <a href="https://youtube.com/your-link-2" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip4.mp4.mp4" poster="images/clip4.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Social Media Reel</span>
-                    <a href="https://youtube.com/your-link-2" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <video src="videos/clip5.mp4.mp4" poster="images/clip5.jpg" muted loop playsinline></video>
-                <div class="portfolio-overlay">
-                    <span class="portfolio-label">Brand Promo</span>
-                    <a href="https://youtube.com/your-link-3" target="_blank" class="portfolio-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full
-                    </a>
-                </div>
+        <div class="portfolio-head">
+            <h2>My Work</h2>
+            <p>Hover to preview • Click to watch</p>
+        </div>
+        <div class="portfolio-slider">
+            <div class="portfolio-track">
+                <div class="portfolio-card"><video src="videos/clip1.mp4.mp4" poster="images/clip1.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Cinematic Edit</span><a href="https://youtube.com/your-link-1" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip2.mp4.mp4" poster="images/clip2.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Social Media Reel</span><a href="https://youtube.com/your-link-2" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip3.mp4.mp4" poster="images/clip3.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Brand Promo</span><a href="https://youtube.com/your-link-3" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip4.mp4.mp4" poster="images/clip4.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Brand Promo</span><a href="https://youtube.com/your-link-4" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip5.mp4.mp4" poster="images/clip5.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Brand Promo</span><a href="https://youtube.com/your-link-5" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <!-- Duplicates -->
+                <div class="portfolio-card"><video src="videos/clip1.mp4.mp4" poster="images/clip1.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Cinematic Edit</span><a href="https://youtube.com/your-link-1" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip2.mp4.mp4" poster="images/clip2.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Social Media Reel</span><a href="https://youtube.com/your-link-2" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip3.mp4.mp4" poster="images/clip3.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Brand Promo</span><a href="https://youtube.com/your-link-3" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip4.mp4.mp4" poster="images/clip4.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Brand Promo</span><a href="https://youtube.com/your-link-4" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
+                <div class="portfolio-card"><video src="videos/clip5.mp4.mp4" poster="images/clip5.jpg" muted loop playsinline></video><div class="portfolio-overlay"><span class="portfolio-label">Brand Promo</span><a href="https://youtube.com/your-link-5" target="_blank" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Watch Full</a></div></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- CONTACT -->
-       <section class="fade-in" id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p><i class="fa-solid fa-envelope"></i>vineethadharsh@gmail.com</p>
-                        <p><i class="fa-solid fa-phone"></i>+91 93606 37906</p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/vineeth.adharsh"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/cut_pulse/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://x.com/Adharshvis"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://linkedin.com/in/adharsh-videoediting"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-right">
-                        <form action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="3c20b109-d12b-45fb-a40f-87e8a13544ba">      
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> vineethadharsh@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 93606 37906</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
+                <div class="contact-right">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                        <input type="text" name="last_name" placeholder="Last Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <textarea name="message" placeholder="Your Message" rows="6"></textarea>
+                        <button type="submit" class="btn2">Send Message</button>
+                    </form>
+                </div>
             </div>
-        </section>
-        <div class="copyright">
-            <p>&copy; Adharsh  .<i class="fa-solid fa-scissors"></i>   ..The editor.</p>
         </div>
-     <script src="script.js"></script>
+    </section>
+
+    <div class="copyright">
+        <p>© 2025 V Adharsh. All Rights Reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
