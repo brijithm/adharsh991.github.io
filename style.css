@@ -634,8 +634,9 @@ form textarea::placeholder {
         display: none;
     } 
     .about-col-1 img {
-    height: 400px;
+    height: 300px;
     object-fit: cover;
+    object-position: top;
 }  
 
     /* NAVBAR: slides in from RIGHT side */
