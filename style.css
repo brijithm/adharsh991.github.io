@@ -632,7 +632,11 @@ form textarea::placeholder {
 
     .home-imgHover{
         display: none;
-    }   
+    } 
+    .about-col-1 img {
+    height: 400px;
+    object-fit: cover;
+}  
 
     /* NAVBAR: slides in from RIGHT side */
     .navbar {
