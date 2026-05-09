@@ -692,11 +692,12 @@ form textarea::placeholder {
         right: -100%;
         left: auto;
         width: 65% !important;
-        height: 100vh;
+        height: auto;
+        min-height: 60vh;
         background: #000;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         padding: 80px 30px 30px;
         gap: 10px;
         z-index: 200;
@@ -753,6 +754,9 @@ form textarea::placeholder {
         padding: 0 6%;
         height: 100vh;
         margin-bottom: 20px;
+    }
+    .homte-text {
+        padding:120px 0 60px
     }
 
     .home-imgHover {
