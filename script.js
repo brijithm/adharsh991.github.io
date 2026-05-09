@@ -20,13 +20,16 @@ const overlay = document.getElementById('overlay');
 burger.addEventListener('click', () => {
     navbar.classList.add('open');
     overlay.classList.add('show');
+    burger.style.display = 'none'; // ← ADD THIS
+
 });
 
 function closeMenu() {
     navbar.classList.remove('open');
     overlay.classList.remove('show');
-}
+    burger.style.display = 'flex'; // ← ADD THIS
 
+}
 document.getElementById('closeBtn').addEventListener('click', closeMenu);
 
 /* =====================
