@@ -637,7 +637,10 @@ form textarea::placeholder {
     height: 300px;
     object-fit: cover;
     object-position: top;
-}  
+    }  
+    #about {
+        padding-top:20px;
+    }
 
     /* NAVBAR: slides in from RIGHT side */
     .navbar {
