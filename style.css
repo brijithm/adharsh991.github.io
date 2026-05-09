@@ -546,6 +546,8 @@ section {
     background: #d94646;
     color: #fff;
 }
+.logo-slider, .portfolio-slider { cursor: grab; user-select: none; }
+.logo-slider:active, .portfolio-slider:active { cursor: grabbing; }
 
 /* =====================
    CONTACT
@@ -895,3 +897,11 @@ form textarea::placeholder {
         margin: 20px 0 0 0;
     }
 }
+/* =====================
+   DRAG TO SCROLL
+   ===================== */
+.logo-slider::-webkit-scrollbar,
+.portfolio-slider::-webkit-scrollbar { display: none; }
+
+.logo-slider, .portfolio-slider { cursor: grab; }
+.logo-slider:active, .portfolio-slider:active { cursor: grabbing; }

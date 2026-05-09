@@ -46,3 +46,62 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+/* =====================
+   DRAG TO SCROLL
+   ===================== */
+function addDragScroll(slider, track) {
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    slider.style.overflowX = 'auto';
+    slider.style.scrollbarWidth = 'none';
+    slider.style.msOverflowStyle = 'none';
+
+    slider.addEventListener('mousedown', e => {
+        isDragging = true;
+        startX = e.clientX;
+        scrollStart = slider.scrollLeft;
+        track.style.animationPlayState = 'paused';
+        slider.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        slider.scrollLeft = scrollStart - (e.clientX - startX);
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        slider.style.cursor = 'grab';
+        track.style.animationPlayState = 'running';
+    });
+
+    slider.addEventListener('touchstart', e => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        scrollStart = slider.scrollLeft;
+        track.style.animationPlayState = 'paused';
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        slider.scrollLeft = scrollStart - (e.touches[0].clientX - startX);
+    }, { passive: true });
+
+    slider.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.animationPlayState = 'running';
+    });
+}
+
+addDragScroll(
+    document.querySelector('.logo-slider'),
+    document.querySelector('.logo-track')
+);
+addDragScroll(
+    document.querySelector('.portfolio-slider'),
+    document.querySelector('.portfolio-track')
+);
