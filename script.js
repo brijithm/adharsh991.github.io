@@ -18,19 +18,25 @@ const navbar  = document.getElementById('navbar');
 const overlay = document.getElementById('overlay');
 
 burger.addEventListener('click', () => {
-    navbar.classList.add('open');
-    overlay.classList.add('show');
-    burger.style.display = 'none'; // ← ADD THIS
-
+    if (navbar.classList.contains('open')) {
+        closeMenu();
+    } else {
+        navbar.classList.add('open');
+        overlay.classList.add('show');
+        burger.classList.add('active');
+    }
 });
 
 function closeMenu() {
     navbar.classList.remove('open');
     overlay.classList.remove('show');
-    burger.style.display = 'flex'; // ← ADD THIS
+    burger.classList.remove('active');
 
 }
-document.getElementById('closeBtn').addEventListener('click', closeMenu);
+document.getElementById('closeBtn').addEventListener('click', function(e) {
+    e.stopPropagation();
+    closeMenu();
+});
 
 /* =====================
    SCROLL FADE-IN
@@ -79,22 +85,23 @@ function addDragScroll(slider, track) {
     });
 
     slider.addEventListener('touchstart', e => {
-        isDragging = true;
-        startX = e.touches[0].clientX;
-        scrollStart = slider.scrollLeft;
-        track.style.animationPlayState = 'paused';
-    }, { passive: true });
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    scrollStart = slider.scrollLeft;
+    track.style.animationPlayState = 'paused';
+}, { passive: true });
 
-    slider.addEventListener('touchmove', e => {
-        if (!isDragging) return;
-        slider.scrollLeft = scrollStart - (e.touches[0].clientX - startX);
-    }, { passive: true });
+window.addEventListener('touchmove', e => {
+    if (!isDragging) return;
+    slider.scrollLeft = scrollStart - (e.touches[0].clientX - startX);
+}, { passive: true });
 
-    slider.addEventListener('touchend', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        track.style.animationPlayState = 'running';
-    });
+window.addEventListener('touchend', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.animationPlayState = 'running';
+});
+    
 }
 
 addDragScroll(

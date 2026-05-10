@@ -90,26 +90,38 @@ img {
 .burger {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     cursor: pointer;
     z-index: 300;
     flex-shrink: 0;
     position: relative;
+    padding: 4px;
 }
 
 .burger span {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 28px;
+    height: 2.5px;
     background: #fff;
     border-radius: 3px;
-    transition: 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.3s ease,
+                width 0.3s ease;
+    transform-origin: center;
 }
 
-
-.close-btn {
-    display: none;
+/* Animated X state */
+.burger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
 }
+.burger.active span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 
 /* =====================
    OVERLAY
@@ -678,6 +690,7 @@ form textarea::placeholder {
 .fade-in:nth-child(4) { transition-delay: 0.3s; }
 .fade-in:nth-child(5) { transition-delay: 0.4s; }
 
+
 /* =====================
    MOBILE RESPONSIVE
    ===================== */
@@ -685,25 +698,29 @@ form textarea::placeholder {
 
     .burger {
         display: flex !important;
-        z-index: 150;
+        z-index: 300;
     }
 
+    .close-btn{
+    display:none;
+    }
     .navbar {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -100%;
-        left: auto;
-        width: 65% !important;
-        height: auto;
-        min-height: 60vh;
-        background: #000;
+        width: 72% !important;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.55);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 80px 30px 30px;
-        gap: 10px;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 60px 40px;
+        gap: 0;
         z-index: 200;
-        transition: right 0.4s ease;
+        transition: right 0.45s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     .navbar.open {
@@ -711,36 +728,46 @@ form textarea::placeholder {
     }
 
     .navbar a {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 600;
-        color: #fff;
-        padding: 12px 0;
+        color: rgba(255, 255, 255, 0.85);
+        padding: 16px 0;
         width: 100%;
-        border-bottom: 1px solid #222;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
         margin-right: 0;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease, padding-left 0.3s ease;
+        position: relative;
     }
 
-    .navbar a:hover {
-        color: #d94646;
-        background: none;
-    }
-
-    .close-btn {
-        display: block;
+    .navbar a::before {
+        content: '';
         position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 32px;
-        cursor: pointer;
-        line-height: 1;
-        z-index: 210;
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 0;
+        background: #d94646;
+        border-radius: 2px;
+        transition: height 0.3s ease;
     }
 
-    .close-btn:hover {
-        color: #d94646;
+    .navbar a:hover,
+    .navbar a.active {
+        color: #fff;
+        padding-left: 12px;
+    }
+
+    .navbar a:hover::before,
+    .navbar a.active::before {
+        height: 60%;
+    }
+
+    .overlay {
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        background: rgba(0, 0, 0, 0.4);
     }
 
     .header {
@@ -905,3 +932,50 @@ form textarea::placeholder {
 
 .logo-slider, .portfolio-slider { cursor: grab; }
 .logo-slider:active, .portfolio-slider:active { cursor: grabbing; }
+/* =====================
+   HOME TEXT ANIMATION
+   ===================== */
+.home-text h1,
+.home-text h3,
+.home-text p,
+.home-text .btn {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.home-text h1 { animation: fadeUp 0.7s ease forwards 0.2s; }
+.home-text h3 { animation: fadeUp 0.7s ease forwards 0.6s; }
+.home-text p  { animation: fadeUp 0.7s ease forwards 1s; }
+.home-text .btn { animation: fadeUp 0.7s ease forwards 1.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing cursor on h3 */
+.home-text h3::after {
+    content: '|';
+    color: #d94646;
+    animation: blink 0.7s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* Word highlight reveal on h1 */
+.home-text h1 .highlight {
+    color: #d94646;
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: revealText 0.8s ease forwards 0.9s;
+}
+
+@keyframes revealText {
+    to { clip-path: inset(0 0% 0 0); }
+}
