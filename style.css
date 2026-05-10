@@ -690,20 +690,22 @@ form textarea::placeholder {
 .fade-in:nth-child(4) { transition-delay: 0.3s; }
 .fade-in:nth-child(5) { transition-delay: 0.4s; }
 
-
-/* =====================
-   MOBILE RESPONSIVE
-   ===================== */
+.close-btn{
+    display:none;
+    }
 @media (max-width: 900px) {
 
+    /* BURGER */
     .burger {
-        display: flex !important;
+        display: flex;
         z-index: 300;
     }
 
-    .close-btn{
-    display:none;
+    .close-btn {
+        display: none;
     }
+
+    /* NAVBAR */
     .navbar {
         position: fixed;
         top: 0;
@@ -764,12 +766,14 @@ form textarea::placeholder {
         height: 60%;
     }
 
+    /* OVERLAY */
     .overlay {
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         background: rgba(0, 0, 0, 0.4);
     }
 
+    /* HEADER */
     .header {
         padding: 15px 5%;
     }
@@ -778,14 +782,12 @@ form textarea::placeholder {
         font-size: 20px;
     }
 
+    /* HOME */
     .home {
         background: none;
         padding: 0 6%;
         height: 100vh;
         margin-bottom: 20px;
-    }
-    .homte-text {
-        padding:120px 0 60px
     }
 
     .home-imgHover {
@@ -805,6 +807,7 @@ form textarea::placeholder {
         margin: 15px 0 30px;
     }
 
+    /* ABOUT */
     #about {
         padding: 20px 0 60px;
     }
@@ -837,6 +840,7 @@ form textarea::placeholder {
         font-size: 26px;
     }
 
+    /* SKILLS */
     #skills {
         margin-top: 60px;
         margin-bottom: 60px;
@@ -853,12 +857,15 @@ form textarea::placeholder {
         gap: 20px;
     }
 
+    /* TOOLS SECTION */
     .tools-section {
         flex-direction: column;
-        margin-left: 0px;
-        margin-right: 15px;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
         border-radius: 10px;
-        padding: 20px 10px;
+        padding: 20px 0;
+        overflow: hidden;
     }
 
     .tools-left {
@@ -868,14 +875,26 @@ form textarea::placeholder {
         text-align: center;
     }
 
+    /* LOGO SLIDER */
+    .logo-slider {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
     .logo-card {
-        width: 130px;
-        height: 130px;
+        width: 110px;
+        height: 110px;
     }
 
     .logo-card img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill-info .title {
+        font-size: 11px;
     }
 
     @keyframes scroll {
@@ -883,6 +902,7 @@ form textarea::placeholder {
         100% { transform: translateX(-33.333%); }
     }
 
+    /* PORTFOLIO */
     #portfolio {
         margin: 60px 0;
     }
@@ -895,9 +915,21 @@ form textarea::placeholder {
         font-size: 26px;
     }
 
+    .portfolio-slider {
+        overflow: hidden;
+    }
+
+    .portfolio-track {
+        margin-top: 20px;
+    }
+
     .portfolio-card {
         width: 260px;
         height: 160px;
+    }
+
+    .portfolio-card video {
+        pointer-events: none;
     }
 
     @keyframes portfolioScroll {
@@ -905,6 +937,7 @@ form textarea::placeholder {
         100% { transform: translateX(calc(-260px * 5 - 20px * 5)); }
     }
 
+    /* CONTACT */
     #contact {
         padding: 60px 0;
         margin-top: 0;
